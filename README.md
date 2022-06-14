@@ -150,7 +150,9 @@ In this Part, you will use Postman to send a GET request to the Cisco IOS XE San
 ##### Step 2: Enter the URL for the Cisco IOS XE Sandbox.
   - a.	The request type is already set to GET. Leave the request type set to GET.
   - b.	In the “Enter request URL” field, type in the URL that will be used to access the RESTCONF service that is running on the Cisco IOS XE Sandbox:
+```
 https://sandbox-iosxe-recomm-1.cisco.com/restconf/
+```
 
 ##### Step 3: Enter authentication credentials.
 Under the URL field, there are tabs listed for Params, Authorization, Headers, Body, Pre-request Script, Test, and Settings. In this lab, you will use Authorization, Headers, and Body.
@@ -184,7 +186,9 @@ This JSON response verifies that Postman can now send other REST API requests to
 ##### Step 6: Use a GET request to gather the information for all interfaces on the Cisco IOS XE Sandbox.
   - a. Now that you have a successful GET request, you can use it as a template for additional requests. At the top of Postman, next to the Launchpad tab, right-click the GET tab that you just used and choose Duplicate Tab.
   - b. Use the ietf-interfaces YANG model to gather interface information. For the URL, add data/ietf-interfaces:interfaces:
+```http
 https://sandbox-iosxe-recomm-1.cisco.com/restconf/data/ietf-interfaces:interfaces
+```
   - c. Click Send. You should see a JSON response from the Cisco IOS XE Sandbox that is similar to the output shown below. Your output may be different depending on your particular router.
 ```json
 {
@@ -280,7 +284,10 @@ https://sandbox-iosxe-recomm-1.cisco.com/restconf/data/ietf-interfaces:interface
 To specify just this interface, extend the URL to only request information for this interface. 
   - a. Duplicate your last GET request.
   - b. Add the interface= parameter to specify an interface and type in the name of the interface. 
+
+```http
 https://sandbox-iosxe-recomm-1.cisco.com/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet1
+```
 
 Note: If you request interface information from a different Cisco device with names that use forward slashes, such as GigabitEthernet0/0/1, use the HTML code %2F for the forward slashes in the interface name. So, 0/0/1 becomes 0%2F0%2F1.
 
@@ -313,9 +320,10 @@ In this Part, you will configure Postman to send a PUT request to the Cisco IOS 
 ##### Step 1: Duplicate and modify the last GET request.
   - a.	Duplicate the last GET request.
   - b.	For the Type of request, click the down arrow next to GET and choose PUT.
-  - c.	For the interface= parameter, change it to =Loopback99 to specify a new interface.
+  - c.	For the interface= parameter, change it to =Loopback99 to specify a new interface. Loopback99 is an example. Choose a random number.
+```http
 https://sandbox-iosxe-recomm-1.cisco.com/restconf/data/ietf-interfaces:interfaces/interface=Loopback99
-
+```
 ##### Step 2: Configure the body of the request specifying the information for the new loopback.
   - a.	To send a PUT request, you need to provide the information for the body of the request. Next to the Headers tab, click Body. Then click the Raw radio button. The field is currently empty. If you click Send now, you will get error code 400 Bad Request because Loopback99 does not exist yet and you did not provide enough information to create the interface.
   - b.	Fill in the Body section with the required JSON data to create a new Loopback1 interface. You can copy the Body section of the previous GET request and modify it. Or you can copy the following into the Body section of your PUT request. Notice that the type of interface must be set to softwareLoopback. 
