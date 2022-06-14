@@ -532,18 +532,20 @@ devasc@labvm:~/labs/devnet-src/restconf$ python3 restconf-get.py
 }
 devasc@labvm:~/labs/devnet-src/restconf$
 ```
-## Part 7: Use a Python Script to Send a PUT Request
+#### Part 7: Use a Python Script to Send a PUT Request
 In this Part, you will create a Python script to send a PUT request to the Cisco IOS XE Sandbox. As was done in Postman, you will create a new loopback interface.
 
-### Step 1: Import modules and disable SSL warnings.
-a.	In the EXPLORER pane under DEVNET-SRC, right-click the restconf directory and choose New File.
-b.	Name the file restconf-put.py. 
-c.	Enter the following commands to import the modules that are required and disable SSL certificate warnings:
+##### Step 1: Import modules and disable SSL warnings.
+  - a. In the EXPLORER pane under DEVNET-SRC, right-click the restconf directory and choose New File.
+  - b. Name the file restconf-put.py. 
+  - c. Enter the following commands to import the modules that are required and disable SSL certificate warnings:
+
+```python
 import json
 import requests
 requests.packages.urllib3.disable_warnings()
-
-### Step 2: Create the variables that will be the components of the request.
+```
+##### Step 2: Create the variables that will be the components of the request.
   - a. Create a variable named api_url and assign it the URL that targets a new Loopback92 interface. 92 is only an example. Choose another number between 0-999.
 
 ```python
