@@ -57,7 +57,7 @@ Password: C1sco12345
 
 CSR1000v#
 ```
-**NOTE: the password will not be echoed back to you
+**NOTE: the password will not be echoed back to you**
 
 - c.	Leave the SSH session open for the next Part.
 
