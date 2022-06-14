@@ -168,7 +168,7 @@ You can send and receive data from the Cisco IOS XE Sandbox in XML or JSON forma
 
 Note: You can change application/yang-data+json to application/yang-data+xml to send and receive XML data instead of JSON data, if necessary.
 
-#### Step 5: Send the API request to the Cisco IOS XE Sandbox.
+##### Step 5: Send the API request to the Cisco IOS XE Sandbox.
 Postman now has all the information it needs to send the GET request. Click Send. Below Temporary Headers, you should see the following JSON response from the Cisco IOS XE Sandbox. If not, verify that you completed the previous steps in this part of the lab and correctly configured RESTCONF and HTTPS service in Part 2.
 ```json
 {
