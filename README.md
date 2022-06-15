@@ -427,7 +427,10 @@ Now you can extract the YANG model response values from the response JSON.
 response_json = resp.json()
 ```
   - b. Add a print statement to display the JSON data.
+
+```python
 print(response_json)
+```
   - c. Save and run your script. You should get output similar to the following:
 
 ```
