@@ -614,14 +614,14 @@ else:
 ```
 
 Element	Explanation
-**resp**	The variable to hold the response from the API.
-**requests.put()**	The method that makes the PUT request.
-**api_url**	The variable that holds the URL address string.
-**data**	The data to be sent to the API endpoint, which is formatted as JSON.
-**auth**	The tuple variable created to hold the authentication information.
-**headers=headers**	A parameter that is assigned the headers variable.
-**verify=False**	A parameter that disables verification of the SSL certificate when the request is made.
-**resp.status_code**	The HTTP status code in the API PUT request reply.
+- **resp**	The variable to hold the response from the API.
+- **requests.put()**	The method that makes the PUT request.
+- **api_url**	The variable that holds the URL address string.
+- **data**	The data to be sent to the API endpoint, which is formatted as JSON.
+- **auth**	The tuple variable created to hold the authentication information.
+- **headers=headers**	A parameter that is assigned the headers variable.
+- **verify=False**	A parameter that disables verification of the SSL certificate when the request is made.
+- **resp.status_code**	The HTTP status code in the API PUT request reply.
   - c.	Save and run the script to send the PUT request to the Cisco IOS XE Sandbox. You should get a 201 Status Created message. If not, check your code and the configuration for the Cisco IOS XE Sandbox.
 d.	You can verify that the interface was created by entering show ip interface brief on the Cisco IOS XE Sandbox.
 Open configuration window
