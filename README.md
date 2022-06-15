@@ -391,8 +391,9 @@ headers = { "Accept": "application/yang-data+json",
            }
 ```
   - c. Create a Python tuple variable named basicauth that has two keys needed for authentication, username and password.
+```code
 basicauth = ("developer", "C1sco12345")
-
+```
 ##### Step 3: Create a variable to send the request and store the JSON response.
 Use the variables that were created in the previous step as parameters for the requests.get() method. This method sends an HTTP GET request to the RESTCONF API on the Cisco IOS XE Sandbox. Assign the result of the request to a variable named resp. That variable will hold the JSON response from the API. If the request is successful, the JSON will contain the returned YANG data model.
   - a. Enter the following statement:
