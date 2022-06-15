@@ -572,7 +572,7 @@ headers = { "Accept": "application/yang-data+json",
   - c. Create a Python tuple variable named basicauth that has two values needed for authentication, username and password.
 
 ```python
-basicauth = ("cisco", "cisco123!")
+basicauth = ("developer", "c1sco12345")
 ```
   - d. Create a Python dictionary variable yangConfig that will hold the YANG data that is required to create the new interface Loopback2. You can use the same dictionary that you used previously in Postman. However, change the interface number and address. Also, be aware that Boolean values must be capitalized in Python. Therefore, make sure that the **T** is capitalized in the key/value pair for “enabled”: True.
 
