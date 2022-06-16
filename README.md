@@ -159,8 +159,8 @@ Under the URL field, there are tabs listed for Params, Authorization, Headers, B
   - a. Click the Authorization tab.
   - b. Under Type, click the down arrow next to “Inherit auth from parent” and choose Basic Auth.
   - c. For Username and Password, enter the local authentication credentials for the Cisco IOS XE Sandbox:
-Username: developer
-Password: C1sco12345
+    - Username: developer
+    - Password: C1sco12345
   - d. Click Headers. Then click the 7 hidden. You can verify that the Authorization key has a Basic value that will be used to authenticate the request when it is sent to the Cisco IOS XE Sandbox.
 
 ##### Step 4: Set JSON as the data type to send to and receive from the Cisco IOS XE Sandbox.
