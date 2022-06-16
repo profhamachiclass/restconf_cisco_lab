@@ -286,7 +286,7 @@ To specify just this interface, extend the URL to only request information for t
   - b. Add the interface= parameter to specify an interface and type in the name of the interface. 
 
 ```http
-https://sandbox-iosxe-recomm-1.cisco.com/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet1
+https://sandbox-iosxe-recomm-1.cisco.com/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet3
 ```
 
 Note: If you request interface information from a different Cisco device with names that use forward slashes, such as GigabitEthernet0/0/1, use the HTML code %2F for the forward slashes in the interface name. So, 0/0/1 becomes 0%2F0%2F1.
@@ -295,14 +295,14 @@ Note: If you request interface information from a different Cisco device with na
 ```json
 {
     "ietf-interfaces:interface": {
-        "name": "GigabitEthernet1",
-        "description": "MANAGEMENT INTERFACE - DON'T TOUCH ME",
+        "name": "GigabitEthernet3",
+        "description": "",
         "type": "iana-if-type:ethernetCsmacd",
         "enabled": true,
         "ietf-ip:ipv4": {
             "address": [
                 {
-                    "ip": "10.10.20.48",
+                    "ip": "3.3.3.3",
                     "netmask": "255.255.255.0"
                 }
             ]
